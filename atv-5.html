@@ -1,0 +1,13 @@
+<script>
+    //Um ciclista decide realizar uma viagem longa de bike, de Araquari para São Paulo. São aproximadamente 550 Km.
+    //Peça para o usuário informar a velocidade média que pedalará durante a viagem.
+    //Peça para o usuário informar quantas horas viajará por dia.
+    //Calcule e apresente qual será o tempo total de duração da viagem.
+
+    const velocidade = Number(prompt(`informe sua velocidade durante o trajeto`));
+    const horas = Number(prompt(`informe quantas horas você irá pedalar por dia`));
+
+    const tempo = Math.ceil((550 / velocidade) / 24);
+    
+    alert(`levará ${tempo} dias`);
+</script>

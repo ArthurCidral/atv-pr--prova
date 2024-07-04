@@ -1,0 +1,28 @@
+<script>
+    //Considere que o usuário deseja realizar a construção de sua casa.
+    //Peça para informar a quantidade de pedreiros que trabalharão na casa
+    //Peça para informar o preço da diária do pedreiro.
+    //Peça também para informar por quantos dias os pedreiros trabalharam.
+    //Após a conclusão pelos pedreiros, os pintores darão continuidade na obra.
+    //Peça para informar a quantidade de pintores que trabalharão na casa.
+    //Peça para informar o preço da diária dos pintores.
+    //Peça também para informar por quantos dias os pintores trabalharam.
+    //Calcule e apresente:
+    //- Valor total gasto com pedreiros e pintores
+    //- Quantidade de dias demandados para finalizar a construção
+
+    const trabalhadores = Number(prompt(`informe quantos pedreiros iram trabalhar na obra`));
+    const valorDiariaPedreiro = Number(prompt(`informe o valor da diaria do pedreiro`));
+    const diasPedreiro = Number(prompt(`informe quantos dias os pedreiros iram ficar na obra`));
+    const trabalhadoresPintores = Number(prompt(`informe quantos pintores iram trabalhar na obra`));
+    const valorDiariaPintor = Number(prompt(`informe o valor da diaria do pintor`));
+    const diasPintor = Number(prompt(`informe quantos dias os pintores iram ficar na obra`));
+
+    const pedreiros = diasPedreiro * valorDiariaPedreiro * trabalhadores
+    const pintores = diasPintor * valorDiariaPintor * trabalhadoresPintores
+    const total = pedreiros + pintores
+    const dias = diasPedreiro + diasPintor
+
+    alert(`o valor total a pagar será de ${total}$`);
+    alert(`o total de dias para finalizar a obra será de ${dias} dias`);
+</script>

@@ -1,0 +1,27 @@
+<script>
+    //Peça para o usuário informar a quantidade de eleitores que possuem no município.
+    //Peça também para o usuário informar quantos votos o Candidato 1 recebeu.
+    //Peça para o usuário informar quantos votos o Candidato 2 recebeu.
+    //Além dos candidatos, peça para informar qual a quantidade de votos brancos e qual a quantidade de votos nulos.
+    //Apresente para o usuário:
+    //- A porcentagem de votos que o Candidato 1 recebeu
+    //- A porcentagem de votos que o Candidato 2 recebeu
+    //- A porcentagem de votos brancos
+    //- A porcentagem de votos nulos
+    //- A porcentagem de pessoas que não foram votar
+
+    const quantidadeEleitores = Number(prompt(`informe quantos eleitores existem no município:`));
+    const candidato1 = Number(prompt(`informe quantos votos o primeiro candidato recebeu`));
+    const candidato2 = Number(prompt(`informe quantos votos o segundo candidato recebeu`));
+    const votosBrancos = Number(prompt(`informe quantas pessoas votaram em branco`));
+    const votosNulos = Number(prompt(`informe quantas pessoas votaram em nulo`));
+
+    const votosValidos = candidato1 + candidato2;
+    const porcentagemCandidato1 = quantidadeEleitores * candidato1 / 100
+    const porcentagemCandidato2 = quantidadeEleitores * candidato2 / 100
+    const votoBranco = quantidadeEleitores * votosBrancos / 100
+    const votoNulo = quantidadeEleitores * votosNulos / 100
+    const naoVotaram = quantidadeEleitores - votosValidos / 100
+
+    alert(`votos válidos ${votosValidos}, votos candidato1 ${porcentagemCandidato1}, votos candidato2 ${porcentagemCandidato2}, votos em branco ${votoBranco}, votos nulos ${votoNulo} e quem não votou ${naoVotaram}.`);
+</script>
